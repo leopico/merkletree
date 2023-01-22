@@ -1,0 +1,4 @@
+-make folder with json format for address
+-npm init
+-npm install merkletreejs
+-npm install keccak256

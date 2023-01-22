@@ -9,10 +9,10 @@ const leaves = whiteListAddressesLeaves.map((addr) => keccak256(addr));
 const merkleTree = new MerkleTree(leaves, keccak256, { sortPairs: true });
 console.log(`Whitelist merkle tree\n`, merkleTree.toString());
 
-const rootHash = merkleTree.getRoot();
-// console.log(rootHash.toString("hex"));
+const rootHash = merkleTree.getHexRoot();
+console.log(rootHash);
 
-const claimingAddress = leaves[0];
+const claimingAddress = leaves[5];
 // console.log(claimingAddress.toString("hex"));
 
 const hexProof = merkleTree.getHexProof(claimingAddress);
